@@ -1,5 +1,5 @@
-# Run once by hand (Actions tab > Publish releases > Run workflow).
-# Creates the release from the zips kept on the "release-files" branch.
+# Run by hand (Actions tab > Publish releases > Run workflow).
+# Creates (or refreshes) the v1.0 release at the newest code from the zips kept on the "release-files" branch.
 name: Publish release
 on: workflow_dispatch
 permissions:
@@ -17,4 +17,6 @@ jobs:
           path: files
       - name: StarDesk Dark 1.0 release
         run: |
-          gh release view v1.0 >/dev/null 2>&1 || gh release create v1.0 files/StarDesk-Dark-Easy-Patch.zip files/StarDesk-Dark-Developer-Patch.zip --target main --latest --title "StarDesk Dark 1.0" --notes-file .github/release-notes/v1.0.md
+          gh release delete v1.0 --cleanup-tag --yes >/dev/null 2>&1 || true
+          sleep 5
+          gh release create v1.0 files/StarDesk-Dark-Easy-Patch.zip files/StarDesk-Dark-Developer-Patch.zip --target main --latest --title "StarDesk Dark 1.0" --notes-file .github/release-notes/v1.0.md
