@@ -7,7 +7,7 @@ Themes: **Dark** (grey, in the style of MuMuPlayer's dark mode), **AMOLED** (pur
 **Windows accent colour**, and **Match Windows** (follows the Windows light/dark setting).
 Text colours are tuned to meet WCAG AA contrast (4.5:1).
 
-This is a fan-made mod. It is not made, endorsed or supported by StarDesk or NetEase.
+This is a fan-made mod. It is not made, endorsed or supported by StarDesk or NetEase. This however is being forwarded to them for hopeful consideration or inspiration.
 
 ## Two downloads
 
