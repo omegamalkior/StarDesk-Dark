@@ -1,6 +1,6 @@
 # Run once by hand (Actions tab > Publish releases > Run workflow).
-# Creates the two releases from the zips kept on the "release-files" branch.
-name: Publish releases
+# Creates the release from the zips kept on the "release-files" branch.
+name: Publish release
 on: workflow_dispatch
 permissions:
   contents: write
@@ -15,9 +15,6 @@ jobs:
         with:
           ref: release-files
           path: files
-      - name: Developer Patch release
+      - name: StarDesk Dark 1.0 release
         run: |
-          gh release view developer-patch-v1.0 >/dev/null 2>&1 || gh release create developer-patch-v1.0 files/StarDesk-Dark-Developer-Patch.zip --target main --latest=false --title "StarDesk Dark 1.0 - Developer Patch" --notes-file .github/release-notes/developer-patch.md
-      - name: Easy Patch release
-        run: |
-          gh release view easy-patch-v1.0 >/dev/null 2>&1 || gh release create easy-patch-v1.0 files/StarDesk-Dark-Easy-Patch.zip --target main --latest --title "StarDesk Dark 1.0 - Easy Patch (one-click)" --notes-file .github/release-notes/easy-patch.md
+          gh release view v1.0 >/dev/null 2>&1 || gh release create v1.0 files/StarDesk-Dark-Easy-Patch.zip files/StarDesk-Dark-Developer-Patch.zip --target main --latest --title "StarDesk Dark 1.0" --notes-file .github/release-notes/v1.0.md

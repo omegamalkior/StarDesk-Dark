@@ -11,19 +11,19 @@ This is a fan-made mod. It is not made, endorsed or supported by StarDesk or Net
 
 ## Two downloads
 
-Both are on the [Releases](../../releases) page.
+Both are in the same release on the [Releases](../../releases) page.
 
-| Release | Who it is for | What it is |
+| Download | Who it is for | What it is |
 | --- | --- | --- |
-| **Easy Patch** | Anyone who uses StarDesk | One installer. Your normal StarDesk shortcuts open StarDesk dark. |
-| **Developer Patch** | StarDesk's developers | The same theme written as C++/Qt source, laid out as a pull request (14 git patches). |
+| `StarDesk-Dark-Easy-Patch.zip` | Anyone who uses StarDesk | One installer. Your normal StarDesk shortcuts open StarDesk dark. |
+| `StarDesk-Dark-Developer-Patch.zip` | StarDesk's developers | The same theme written as C++/Qt source, laid out as a pull request (14 git patches). |
 
-Each release also has GitHub's automatic **Source code (zip)** download, which is this whole repository.
+The release also has GitHub's automatic **Source code (zip)** download, which is this whole repository.
 
 ### Easy Patch - how to use
 
 1. Install StarDesk 1.6.0 if you have not already.
-2. Download `StarDesk-Dark-Easy-Patch.zip` from the Easy Patch release and unzip it.
+2. Download `StarDesk-Dark-Easy-Patch.zip` from the release and unzip it.
 3. Double-click **Install StarDesk Dark** and choose **Yes** when Windows asks.
 4. Pick Dark or AMOLED any time from **Start > StarDesk Dark Settings**.
 
