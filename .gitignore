@@ -1,0 +1,7 @@
+*.obj
+*.exe
+*.lib
+launcher-src/*.h
+launcher-src/stardesk
+launcher-src/harness
+__pycache__/

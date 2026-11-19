@@ -1,0 +1,297 @@
+kind,original_text_in_StarDesk,dark_replacement
+svg,"fill=""black""","fill=""white"""
+svg,"stroke=""black""","stroke=""white"""
+svg,"#F9F9F9"" fill-opacity=""0.6""","#515151"" fill-opacity=""0.8"""
+svg,"#F8F8F8"" fill-opacity=""0.85""","#323232"" fill-opacity=""0.85"""
+svg,"stroke=""#EEEEEE""","stroke=""#454545"""
+svg,"stroke=""#CFD1D5""","stroke=""#4A4A4A"""
+svg,"fill=""#EEEEEE""","fill=""#454545"""
+svg,"fill=""#040B18""","fill=""#F0F0F0"""
+svg,"stroke=""#040B18""","stroke=""#F0F0F0"""
+svg,"stroke=""#CADFFF""","stroke=""#2E2E2E"""
+svg,"stroke=""#B5D3FF""","stroke=""#404040"""
+svg,"stroke=""#CBE0FF""","stroke=""#2E2E2E"""
+svg,"fill=""#D0D4DA""","fill=""#454545"""
+svg,"fill=""#B5D3FF""","fill=""#404040"""
+svg,"stroke=""#E5EAF0""","stroke=""#4A4A4A"""
+svg,"stroke=""#DBDFE6""","stroke=""#585858"""
+svg,"fill=""#F2F2F2""","fill=""#404040"""
+svg,"fill=""#F1F3F6""","fill=""#3D3D3D"""
+svg,"fill=""#DEEAFF""","fill=""#1F1F1F"""
+svg,"fill=""#EBEEF8""","fill=""#3E3E3E"""
+svg,"fill=""#F8F8F8""","fill=""#393939"""
+svg,"stroke=""#333333""","stroke=""#E0E0E0"""
+svg,"fill=""#333333""","fill=""#E0E0E0"""
+svg,"fill=""#EEF3FF""","fill=""#1E1E1E"""
+svg,"fill=""#F1F5FF""","fill=""#1E1E1E"""
+svg,"fill=""#DAE6FF""","fill=""#222222"""
+svg,"fill=""#505257""","fill=""#CDCDCD"""
+svg,"fill=""#F4FFFA""","fill=""#1E1E1E"""
+svg,"stroke=""#DEEAFF""","stroke=""#1F1F1F"""
+svg,"fill=""#E8F2FF""","fill=""#1E1E1E"""
+svg,"fill=""#BAE1FB""","fill=""#3E3E3E"""
+svg,"fill=""#DEF3FF""","fill=""#242424"""
+svg,"stop-color=""#BAE1FB""","stop-color=""#3E3E3E"""
+svg,"stop-color=""#E6E6F7""","stop-color=""#1E1E1E"""
+svg,"stop-color=""#C8C8E9""","stop-color=""#414141"""
+svg,"stop-color=""#F2F2FC""","stop-color=""#1E1E1E"""
+svg,"stop-color=""#F5F5FE""","stop-color=""#1E1E1E"""
+svg,"stroke=""#DEF0FF""","stroke=""#232323"""
+svg,"fill=""#E0E4EA""","fill=""#525252"""
+svg,"fill=""#D0D2D6""","fill=""#484848"""
+svg,"fill=""#D6D9DE""","fill=""#404040"""
+svg,"fill=""#E9ECF1""","fill=""#464646"""
+svg,"fill=""#F9F9F9""","fill=""#363636"""
+svg,"fill=""#2E2F32""","fill=""#E2E2E2"""
+svg,"fill=""#C0E6FF""","fill=""#373737"""
+svg,"fill=""#C6E9FF""","fill=""#333333"""
+svg,"fill=""#B0E0FF""","fill=""#424242"""
+svg,"fill=""#E5F5FF""","fill=""#1F1F1F"""
+svg,"fill=""#AEDCF8""","fill=""#494949"""
+svg,"stop-color=""#DDF2FF""","stop-color=""#242424"""
+svg,"stop-color=""#D8EFFF""","stop-color=""#272727"""
+svg,"stroke=""#F9F9F9""","stroke=""#363636"""
+svg,"fill=""#D9D9D9""","fill=""#404040"""
+svg,"stop-color=""#E8F2FF""","stop-color=""#1E1E1E"""
+svg,"fill=""#B0CEFF""","fill=""#434343"""
+svg,"fill=""#C2DEFF""","fill=""#353535"""
+svg,"fill=""#C6C9CE""","fill=""#535353"""
+svg,"fill=""#E0E2E7""","fill=""#535353"""
+svg,"stop-color=""#0B1722""","stop-color=""#F0F0F0"""
+svg,"fill=""#222222""","fill=""#EAEAEA"""
+svg,"stop-color=""#111111""","stop-color=""#F0F0F0"""
+svg,"fill=""#FBFCFF""","fill=""#1E1E1E"""
+svg,"fill=""#DADADA""","fill=""#5F5F5F"""
+svg,"fill=""#DEF0FF""","fill=""#232323"""
+svg,"fill=""#BDE1FF""","fill=""#3A3A3A"""
+svg,"stop-color=""#CCCCCC""","stop-color=""#515151"""
+svg,"fill=""#462F2C""","fill=""#DEDEDE"""
+svg,"fill=""#3B3B3B""","fill=""#DBDBDB"""
+svg,"stroke=""#D0D2D6""","stroke=""#484848"""
+svg,"fill=""#F8FBFD""","fill=""#343434"""
+svg,"fill=""#ADD2FF""","fill=""#464646"""
+svg,"stroke=""#000000""","stroke=""#F0F0F0"""
+svg,"stroke=""#4B4B4C""","stroke=""#D1D1D1"""
+svg,"stop-color=""#CBD7E3""","stop-color=""#434343"""
+svg,"stop-color=""#D5ECFC""","stop-color=""#2C2C2C"""
+svg,"stop-color=""#2F4541""","stop-color=""#D9D9D9"""
+svg,"fill=""#D8FFFF""","fill=""#2A2A2A"""
+svg,"fill=""#454545""","fill=""#D5D5D5"""
+svg,"fill=""#E0E0E0""","fill=""#585858"""
+svg,"stop-color=""#323232""","stop-color=""#E1E1E1"""
+svg,"stop-color=""#F6F6F5""","stop-color=""#3D3D3D"""
+svg,"stop-color=""#E8E8E8""","stop-color=""#4E4E4E"""
+svg,"fill=""#F9D4C4""","fill=""#393939"""
+svg,"stroke=""#4E5357""","stroke=""#CDCDCD"""
+svg,"fill=""#D8DAE4""","fill=""#5B5B5B"""
+svg,"stop-color=""#535767""","stop-color=""#CACACA"""
+svg,"stop-color=""#FFF5F2""","stop-color=""#1E1E1E"""
+svg,"stop-color=""#FFF5F6""","stop-color=""#1E1E1E"""
+svg,"stop-color=""#DEFCFF""","stop-color=""#272727"""
+svg,"fill=""#282F3D""","fill=""#E3E3E3"""
+svg,"stop-color=""#DDDDFF""","stop-color=""#1E1E1E"""
+svg,"stop-color=""#D5D5FF""","stop-color=""#1F1F1F"""
+svg,"stop-color=""#B1CCFF""","stop-color=""#434343"""
+svg,"stop-color=""#C8E2FF""","stop-color=""#303030"""
+svg,"stop-color=""#DAEBFF""","stop-color=""#232323"""
+svg,"stop-color=""#C6E0FD""","stop-color=""#353535"""
+svg,"stop-color=""#B0D3FD""","stop-color=""#454545"""
+svg,"stop-color=""#B6D5FD""","stop-color=""#3F3F3F"""
+svg,"stop-color=""#BAD1FF""","stop-color=""#3C3C3C"""
+svg,"stop-color=""#CFE1FF""","stop-color=""#2A2A2A"""
+svg,"stop-color=""#C1D4FF""","stop-color=""#353535"""
+svg,"stop-color=""#D3E4FF""","stop-color=""#282828"""
+svg,"stop-color=""#DEEFFF""","stop-color=""#212121"""
+svg,"stop-color=""#EBF5FF""","stop-color=""#1E1E1E"""
+svg,"stop-color=""#E7DEFF""","stop-color=""#1E1E1E"""
+svg,"fill=""#2F2F30""","fill=""#E2E2E2"""
+svg,"fill=""#CECECE""","fill=""#4F4F4F"""
+svg,"stop-color=""#F3FAFF""","stop-color=""#1E1E1E"""
+svg,"fill=""#BBE1FF""","fill=""#3B3B3B"""
+svg,"fill=""#F3E8CA""","fill=""#373737"""
+svg,"fill=""#FFE3A4""","fill=""#414141"""
+stylesheet,"rgba(0, 0, 0, 115)",#73FFFFFF
+stylesheet,"rgba(0,0,0,115)",#73FFFFFF
+stylesheet,"rgba(0, 0, 0, 20)",#14FFFFFF
+stylesheet,"rgba(0,0,0,0.9)",#E6FFFFFF
+stylesheet,"rgba(0, 0, 0, 102)",#66FFFFFF
+stylesheet,"rgba(0, 0, 0, 156)",#9CFFFFFF
+stylesheet,"rgba(0,0,0,0.03)",#08FFFFFF
+stylesheet,"rgba(0, 0, 0, 26)",#1AFFFFFF
+stylesheet,"rgba(0,0,0,0.6)",#99FFFFFF
+stylesheet,"rgba(0, 0, 0, 89)",#59FFFFFF
+stylesheet,"rgba(0,0,0,89)",#59FFFFFF
+stylesheet,"rgba(0, 0, 0, 230)",#E6FFFFFF
+stylesheet,"rgba(0,0,0,230)",#E6FFFFFF
+stylesheet,"rgba(0, 0, 0, 153)",#99FFFFFF
+stylesheet,"rgba(0, 0, 0, 15)",#0FFFFFFF
+stylesheet,"rgba(0,0,0,0.06)",#0FFFFFFF
+stylesheet,color:#000000,color:#EEEEEE
+stylesheet,"rgb(0, 0, 0)",#FFFFFF
+stylesheet,"rgb(220, 220, 220)",#565656
+stylesheet,"rgb(217, 217, 217)",#767676
+stylesheet,"rgb(233, 236, 241)",#565656
+stylesheet,"rgb(249, 251, 253)",#323232
+stylesheet,"rgba(252,252,252,217)",#D9323232
+stylesheet,"rgba(255, 255, 255, 153)",#99454545
+stylesheet,"rgba(255, 255, 255, 245)",#F55D5D5D
+stylesheet,"rgba(248, 248, 253, 0.95)",#F2323232
+stylesheet,"rgba(218, 218, 218, 230)",#E6787878
+stylesheet,"rgba(218, 218, 218, 77)",#4D828282
+stylesheet,"rgba(218, 218, 218, 51)",#33828282
+stylesheet,"rgba(222, 234, 255, 255)",#FF27383E
+stylesheet,"rgba(181, 211, 255, 255)",#FF31484F
+stylesheet,"rgba(140, 184, 255, 255)",#FF00779B
+stylesheet,"color:rgba(10, 94, 204, 255)",color:#FF54D7FF
+stylesheet,color:#0B66DD,color:#54D7FF
+stylesheet,color:#1740B0,color:#1BCAFF
+stylesheet,"rgba(11, 102, 221, 255)",#FF54D7FF
+stylesheet,"rgba(11, 102, 221, 128)",#8054D7FF
+stylesheet,"color:rgba(255, 255, 255, 255);\nbackground-color:rgba(58, 123, 252, 255)",color:#FF14242A               ;\nbackground-color:#FF12C8FF
+stylesheet,"color:rgba(255, 255, 255, 255);\nbackground-color:rgba(58, 123, 252, 204)",color:#FF14242A               ;\nbackground-color:#CC12C8FF
+stylesheet,"color:rgba(255, 255, 255, 230);\nbackground-color:rgba(58, 123, 252, 166)",color:#E614242A               ;\nbackground-color:#A612C8FF
+stylesheet,"rgba(58, 123, 252, 204)",#CC12C8FF
+stylesheet,"rgba(10, 94, 204, 255)",#FF0090BC
+stylesheet,"rgba(58, 123, 252, 166)",#A612C8FF
+stylesheet,"rgba(58, 123, 252, 255)",#FF12C8FF
+stylesheet,"rgb(58,123,252)",#12C8FF
+stylesheet,color:#3A7BFC,color:#12C8FF
+svg,"fill=""#8CB8FF""","fill=""#5DD9FF"""
+svg,"fill=""#3A7BFC""","fill=""#12C8FF"""
+svg,"fill=""#6D9EFF""","fill=""#41D3FF"""
+svg,"stroke=""#6D9EFF""","stroke=""#41D3FF"""
+svg,"stroke=""#7CAAE5""","stroke=""#38D0FF"""
+svg,"stroke=""#275BD6""","stroke=""#00ABDF"""
+svg,"stop-color=""#2C65FA""","stop-color=""#04C4FF"""
+svg,"stop-color=""#4891FF""","stop-color=""#21CBFF"""
+svg,"fill=""#6593EE""","fill=""#2BCEFF"""
+svg,"fill=""#275BD6""","fill=""#00ABDF"""
+svg,"fill=""#639CFF""","fill=""#39D1FF"""
+svg,"fill=""#9AD3F6""","fill=""#61DAFF"""
+svg,"fill=""#7BC2EE""","fill=""#3FD2FF"""
+svg,"stop-color=""#1E74F6""","stop-color=""#00BAF3"""
+svg,"stop-color=""#0097F5""","stop-color=""#00A5D8"""
+svg,"stop-color=""#19A7FF""","stop-color=""#00BDF6"""
+svg,"stop-color=""#578FFF""","stop-color=""#2ECEFF"""
+svg,"stop-color=""#2A6DF3""","stop-color=""#00C0FB"""
+svg,"stop-color=""#3173F5""","stop-color=""#04C4FF"""
+svg,"stop-color=""#528BFE""","stop-color=""#29CDFF"""
+svg,"fill=""#0066FF""","fill=""#00ACE0"""
+svg,"fill=""#0047FF""","fill=""#00ACE0"""
+svg,"stop-color=""#2E82FF""","stop-color=""#0AC6FF"""
+svg,"fill=""#0B66DD""","fill=""#009DCC"""
+svg,"stroke=""#0B66DD""","stroke=""#009DCC"""
+svg,"fill=""#80AFF6""","fill=""#4AD5FF"""
+svg,"fill=""#4285F4""","fill=""#12C8FF"""
+svg,"stop-color=""#3687FF""","stop-color=""#11C7FF"""
+svg,"fill=""#1A75FF""","fill=""#00BEF7"""
+svg,"stop-color=""#1A5BFF""","stop-color=""#00BEF7"""
+svg,"stop-color=""#1A7EFF""","stop-color=""#00BEF7"""
+svg,"stop-color=""#1AA7FF""","stop-color=""#00BEF7"""
+svg,"stroke=""#8CB8FF""","stroke=""#5DD9FF"""
+svg,"stroke=""#0047FF""","stroke=""#00ACE0"""
+svg,"stop-color=""#5182FF""","stop-color=""#29CDFF"""
+svg,"stop-color=""#0047FF""","stop-color=""#00ACE0"""
+svg,"stop-color=""#1C66F8""","stop-color=""#00BAF3"""
+svg,"stop-color=""#3A7BFC""","stop-color=""#12C8FF"""
+svg,"stop-color=""#0B66DD""","stop-color=""#009DCC"""
+svg,"stroke=""#3A7BFC""","stroke=""#12C8FF"""
+svg,"stroke=""#6DA5FF""","stroke=""#41D3FF"""
+svg,"fill=""#6DA5FF""","fill=""#41D3FF"""
+svg,"fill=""#1D66F8""","fill=""#00BBF4"""
+svg,"stop-color=""#1D66F8""","stop-color=""#00BBF4"""
+svg,"stop-color=""#84AEFB""","stop-color=""#52D7FF"""
+svg,"stop-color=""#267DFF""","stop-color=""#03C4FF"""
+svg,"stop-color=""#3292FF""","stop-color=""#0DC7FF"""
+svg,"stop-color=""#3E74FF""","stop-color=""#18C9FF"""
+svg,"fill=""#1740B0""","fill=""#0086AF"""
+svg,"stop-color=""#2D5479""","stop-color=""#007092"""
+svg,"stop-color=""#318AFF""","stop-color=""#0DC6FF"""
+svg,"stop-color=""#4D9AFF""","stop-color=""#25CCFF"""
+svg,"fill=""#223753""","fill=""#293B41"""
+svg,"fill=""#2769C6""","fill=""#00A0D1"""
+svg,"stop-color=""#6C9EFF""","stop-color=""#40D3FF"""
+svg,"fill=""#015EB5""","fill=""#007BA0"""
+svg,"stop-color=""#015EB5""","stop-color=""#007BA0"""
+svg,"fill=""#6BB3EC""","fill=""#2FCEFF"""
+svg,"fill=""#508FD6""","fill=""#04C4FF"""
+svg,"fill=""#3770C3""","fill=""#00A9DC"""
+svg,"stop-color=""#718CA7""","stop-color=""#00BDF6"""
+svg,"stop-color=""#6D9AF8""","stop-color=""#3BD1FF"""
+svg,"stop-color=""#99BFFA""","stop-color=""#64DBFF"""
+svg,"stop-color=""#4C71A5""","stop-color=""#00A3D4"""
+svg,"stop-color=""#8FAFD8""","stop-color=""#3DD2FF"""
+svg,"stop-color=""#93B3E1""","stop-color=""#48D4FF"""
+svg,"stop-color=""#7FA2B8""","stop-color=""#13C8FF"""
+svg,"fill=""#3376CD""","fill=""#00ADE1"""
+svg,"fill=""#103E5F""","fill=""#1E3C46"""
+svg,"stop-color=""#0D76B7""","stop-color=""#0084AC"""
+svg,"fill=""#3F6096""","fill=""#0090BB"""
+svg,"fill=""#264D75""","fill=""#006988"""
+svg,"stop-color=""#1182C6""","stop-color=""#0091BD"""
+svg,"stop-color=""#24A5EC""","stop-color=""#00B8EF"""
+svg,"stop-color=""#0775C1""","stop-color=""#0087B0"""
+svg,"fill=""#6195FD""","fill=""#35D0FF"""
+svg,"fill=""#7FA9FD""","fill=""#4FD6FF"""
+svg,"fill=""#3485FF""","fill=""#0FC7FF"""
+svg,"stop-color=""#92C2F9""","stop-color=""#5DD9FF"""
+svg,"stop-color=""#7DB3F5""","stop-color=""#47D4FF"""
+svg,"stop-color=""#7BC4F9""","stop-color=""#48D4FF"""
+svg,"stop-color=""#3086EA""","stop-color=""#00BEF8"""
+svg,"stop-color=""#338DF3""","stop-color=""#04C4FF"""
+svg,"stop-color=""#8BC0FF""","stop-color=""#5CD9FF"""
+svg,"stop-color=""#98C7FF""","stop-color=""#67DCFF"""
+svg,"stop-color=""#4E9FF7""","stop-color=""#1FCBFF"""
+svg,"stop-color=""#2E84EA""","stop-color=""#00BDF6"""
+svg,"stop-color=""#A7CEFA""","stop-color=""#70DEFF"""
+svg,"stop-color=""#7CB6F5""","stop-color=""#46D4FF"""
+svg,"fill=""#85B8FF""","fill=""#56D8FF"""
+svg,"stop-color=""#3485FF""","stop-color=""#0FC7FF"""
+svg,"stop-color=""#00A3FF""","stop-color=""#00ACE0"""
+svg,"stop-color=""#50BCFF""","stop-color=""#28CDFF"""
+svg,"stop-color=""#4B98FF""","stop-color=""#23CCFF"""
+svg,"stop-color=""#56BBFF""","stop-color=""#2DCEFF"""
+svg,"fill=""#92CDFC""","fill=""#5FDAFF"""
+svg,"stroke=""#5597D9""","stroke=""#0BC6FF"""
+svg,"stop-color=""#96B5D9""","stop-color=""#44D3FF"""
+svg,"stop-color=""#7DA5D4""","stop-color=""#2ACDFF"""
+svg,"fill=""#0A80FF""","fill=""#00B3E9"""
+UTF-16,"background-color:rgba(0,0,0,0)",background-color:transparent
+UTF-16,"background-color:rgba(0,0,0,15)",background-color:#0FFFFFFF
+UTF-16,"background-color:rgba(0,0,0,8)",background-color:#08FFFFFF
+UTF-16,"background-color:rgba(0,112,244,204)",background-color:#CC009DCC
+UTF-16,"background-color:rgba(0,112,244,255)",background-color:#009DCC
+UTF-16,"background-color:rgba(0,122,255,255)",background-color:#12C8FF
+UTF-16,"background-color:rgba(234,234,234,204)",background-color:#CC4C4C4C
+UTF-16,"background-color:rgba(238,238,238,255)",background-color:#4C4C4C
+UTF-16,"background-color:rgba(255,255,255,255)",background-color:#515151
+UTF-16,"background: rgb(255, 255, 255)",background: #363636
+UTF-16,"background: rgba(0, 0, 0, 0.1)",background: #1AFFFFFF
+UTF-16,"background: rgba(249, 249, 249, 0.6)",background: #99363636
+UTF-16,background:#0A80FF,background:#12C8FF
+UTF-16,background:#FFFFFF,background:#363636
+UTF-16,"background:rgba(0,0,0,0.1)",background:#1AFFFFFF
+UTF-16,"background:rgba(0,0,0,0.2)",background:#33FFFFFF
+UTF-16,"background:rgba(0,0,0,115)",background:#73FFFFFF
+UTF-16,border-bottom:1px solid #3A7BFC,border-bottom:1px solid #38D0FF
+UTF-16,"border-bottom:1px solid rgba(0,0,0,0.1)",border-bottom:1px solid #1AFFFFFF
+UTF-16,"border: 1px solid rgba(0, 0, 0, 0.1)",border: 1px solid #1AFFFFFF
+UTF-16,"border:1px solid rgba(0, 0, 0, 26)",border:1px solid #1AFFFFFF
+UTF-16,"border:1px solid rgba(0,0,0,0)",border:1px solid transparent
+UTF-16,"color: rgba(0, 0, 0, 0.45)",color: #96FFFFFF
+UTF-16,"color: rgba(0, 0, 0, 0.6)",color: #C5FFFFFF
+UTF-16,"color: rgba(0, 0, 0, 0.9)",color: #FFFFFF
+UTF-16,color:#0A80FF,color:#38D0FF
+UTF-16,color:#1740B0,color:#35D0FF
+UTF-16,color:#275BD6,color:#54D7FF
+UTF-16,color:#3A7BFC,color:#38D0FF
+UTF-16,color:#606266,color:#BABCC0
+UTF-16,color:#C94032,color:#FAADA5
+UTF-16,"color:rgba(0, 0, 0, 153)",color:#C5FFFFFF
+UTF-16,"color:rgba(0,0,0,0.35)",color:#70FFFFFF
+UTF-16,"color:rgba(0,0,0,0.6)",color:#C5FFFFFF
+UTF-16,"color:rgba(0,0,0,0.9)",color:#FFFFFF
+UTF-16,"color:rgba(0,0,0,153)",color:#C5FFFFFF
+UTF-16,"hover""]{background-color:rgba(255,255,255,255)","hover""]{background-color:#565656"
+UTF-16,"solid rgba(11,102,221,77)",solid #8038D0FF
+UTF-16,"solid rgba(117,117,115,115)",solid #28FFFFFF

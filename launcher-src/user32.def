@@ -1,0 +1,10 @@
+LIBRARY user32.dll
+EXPORTS
+MessageBoxW
+LoadIconW
+EnumWindows
+GetWindowThreadProcessId
+GetClassNameW
+PostMessageW
+IsWindowVisible
+GetWindowRect

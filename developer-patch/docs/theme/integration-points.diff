@@ -1,0 +1,180 @@
+# Changes to existing StarDesk files (commit 6 of the PR).
+#
+# These hunks were written without access to the StarDesk source, from the shipping 1.6.0.166 client.
+# File paths marked [known] appear in the client's own build paths; [inferred] means the class is known
+# but its file name is a guess. [verified] means the function was located in the 1.6.0.166 binary and
+# checked against its machine code (what it calls, which colour token it reads); the notes say what was found. Hunks show only the lines to add or change, anchored by the function
+# they belong in, so they will not apply with `git apply` - place each by hand.
+
+diff --git a/src/client_ui/CMakeLists.txt b/src/client_ui/CMakeLists.txt   [inferred]
+@@ client_ui target sources @@
++    uikit/theme/theme_manager.cpp
++    uikit/theme/themed_svg.cpp
++    uikit/theme/themed_asset.cpp
++    shell/features/settings/theme_toggle_row.cpp
++    resources/theme/theme_dark.qrc
+@@ target_link_libraries(client_ui ...) @@
++    Qt5::Svg
++    dwmapi
+
+diff --git a/src/apps/client/main.cpp b/src/apps/client/main.cpp   [known]
+@@ int main(int argc, char *argv[]) - right after the QApplication is constructed, before the first window @@
++#include "client_ui/uikit/theme/theme_manager.h"
+...
++    // Loads the saved theme (Light by default), applies the palette and dark window frames.
++    client::theme::ThemeManager::instance().initialize();
+
+diff --git a/src/client_ui/uikit/theme/theme_color.cpp b/src/client_ui/uikit/theme/theme_color.cpp   [inferred]
+@@ where ui_kit turns @ThemeColor(...) into colours (the code that sets _uiKitThemeStyleSheetSource / _uiKitThemeStyleSheetResolved) @@
+-    resolved = resolveWithLightTable(source);
++    resolved = client::theme::ThemeManager::instance().resolveStyleSheet(source);
+@@ where a ThemeColorToken becomes a QColor for painting (ThemedLabel, ThemedPushButton, ToggleSwitch, ...) @@   [verified]
++    // 1.6.0.166: one small function does this. It indexes a static table of 255 ARGB values (the light
++    // palette, in ThemeColorToken order) and builds QColor(QRgb) - it never looks at the current theme.
++    // About 400 call sites reach it through one thunk, so changing this function covers all of them.
+-    return QColor::fromRgba(kLightTable[static_cast<int>(token)]);
++    return client::theme::ThemeManager::instance().color(token);
+
+diff --git a/src/client_ui/uikit/theme/theme_color_token.h b/src/client_ui/uikit/theme/theme_color_token.h   [inferred]
+@@ enum class ThemeColorToken - append at the end, then add one entry per array in theme_palettes.h @@
++    kFillTabSelected,     // remote-session tab, selected   (was kTextInversePrimary)
++    kFillTabHover,        // remote-session tab, hovered    (was kTextGray182)
++    kFillSwitchKnobOff,   // ToggleSwitch knob when Off     (was kFillBlackAlpha153)
++    kFillToast,           // NrdToastWidget background      (was kFillSolidWhite)
++    kFillRemoteTitleBar,  // remote-session title bar       (was kBorderCoolGray)
++// Light / Dark / AMOLED values for theme_palettes.h:
++//   kFillTabSelected   #FFFFFFFF / #FF464646 / #FF161616
++//   kFillTabHover      #FFB6BCC2 / #FF373737 / #FF0C0C0C
++//   kFillSwitchKnobOff #99000000 / #FFC0C0C0 / #FF969696
++//   kFillToast         #FFFFFFFF / #FF242424 / #FF161616
++//   kFillRemoteTitleBar #FFD7DCE0 / #FF242424 / #FF000000
+
+diff --git a/src/client_ui/shell/features/video_ui/tab_elements/tab_widget.cpp b/src/client_ui/shell/features/video_ui/tab_elements/tab_widget.cpp   [known file; verified]
+@@ void TabItem::paintEvent(QPaintEvent *) @@
++    // [verified] TabItem overrides paintEvent; the tab fill comes from two one-line colour getters next to
++    // it that return token 2 (kTextInversePrimary, selected) and token 221 (kTextGray182, hovered).
+-    painter.setBrush(themeColor(ThemeColorToken::kTextInversePrimary));   // selected tab
++    painter.setBrush(themeColor(ThemeColorToken::kFillTabSelected));
+-    painter.setBrush(themeColor(ThemeColorToken::kTextGray182));          // hovered tab
++    painter.setBrush(themeColor(ThemeColorToken::kFillTabHover));
+
+diff --git a/src/client_ui/uikit/widgets/toggle_switch.cpp b/src/client_ui/uikit/widgets/toggle_switch.cpp   [file inferred; class verified]
+@@ ToggleSwitch (ui_kit): the knob-colour helper just before ToggleSwitch::paintEvent - the Off-state knob @@
++    // [verified] it picks the knob colour by token; Off = kFillBlackAlpha153 (a black 60% overlay).
+-    painter.setBrush(themeColor(ThemeColorToken::kFillBlackAlpha153));
++    painter.setBrush(themeColor(ThemeColorToken::kFillSwitchKnobOff));
+
+diff --git a/src/client_ui/shell/features/video_ui/nrd_toast_widget.cpp b/src/client_ui/shell/features/video_ui/nrd_toast_widget.cpp   [file inferred; function verified]
+@@ void NrdToastWidget::paintEvent(QPaintEvent *) @@
++    // [verified] the background brush is token 34 (kFillSolidWhite), set early in paintEvent.
+-    painter.setBrush(themeColor(ThemeColorToken::kFillSolidWhite));
++    painter.setBrush(themeColor(ThemeColorToken::kFillToast));
+
+diff --git a/src/client_ui/uikit/widgets/windows/modal_box_frame.cpp b/src/client_ui/uikit/widgets/windows/modal_box_frame.cpp   [known]
+@@ every place a background picture is loaded (":/uikit/common_modal_bk@4x.png", ":/uikit/common_modal_round_bk@4x.png") @@
++#include "client_ui/uikit/theme/themed_asset.h"
+...
+-    QPixmap background(QStringLiteral(":/uikit/common_modal_bk@4x.png"));
++    QPixmap background(client::theme::themedAsset(QStringLiteral(":/uikit/common_modal_bk@4x.png")));
+# Same one-line change wherever the other pictures in resources/theme/dark are loaded
+# (remote_boot, message_box, control/menu, cloud_device, file_transfer, safe_lock, second_screen,
+#  notify_center, device, login, upgrade, recharge, brand splash, logo, QR-code logo).
+# Pictures loaded once at construction should reload on ThemeManager::modeChanged.
+
+diff --git a/src/client_ui/uikit/widgets/windows/nrd_window_effect.cpp b/src/client_ui/uikit/widgets/windows/nrd_window_effect.cpp   [known]
+@@ NrdWindowEffect - the Mica path, right before DwmSetWindowAttribute(hwnd, DWMWA_SYSTEMBACKDROP_TYPE, ...) @@
++    // Tell Windows the window is dark, or Mica and the window edge stay light in dark mode.
++    // (ThemeManager also does this for every window on show; doing it here covers windows
++    //  that enable Mica before they are shown.)
++    const BOOL dark = client::theme::ThemeManager::instance().isDark();
++    DwmSetWindowAttribute(hwnd, 20 /*DWMWA_USE_IMMERSIVE_DARK_MODE*/, &dark, sizeof dark);
+
+diff --git a/src/client_ui/shell/features/settings/settings_content.cpp b/src/client_ui/shell/features/settings/settings_content.cpp   [known]
+@@ SettingsContent - after Settings > General is built @@
++#include "theme_toggle_row.h"
+...
++    client::settings::insertThemeToggleAbove(startWithWindowsRow);   // the "Start with Windows" row widget
+
+diff --git a/src/client_ui/shell/support/webview/webview_host_impl.cpp b/src/client_ui/shell/support/webview/webview_host_impl.cpp   [known]
+@@ where the WebView2 environment is created (CreateCoreWebView2EnvironmentWithOptions) @@
++    // Feedback, message centre, cloud devices and purchase history are web pages. In dark modes ask
++    // Chromium for dark mode: pages with a dark style use it, the rest get its automatic dark rendering.
++    if (client::theme::ThemeManager::instance().isDark())
++        options->put_AdditionalBrowserArguments(L"--force-dark-mode --enable-features=WebContentsForceDark");
++    // (keep any arguments already passed, e.g. --proxy-server=, by appending them to this string)
+@@ after the controller is created, when ICoreWebView2_13 is available @@
++    // Profile-level colour scheme so prefers-color-scheme follows the client theme, and live switching:
++    profile->put_PreferredColorScheme(isDark ? COREWEBVIEW2_PREFERRED_COLOR_SCHEME_DARK
++                                             : COREWEBVIEW2_PREFERRED_COLOR_SCHEME_LIGHT);
+
+diff --git a/src/client_ui/shell/features/login/new_ui/new_login_main_window.cpp   [known]
+diff --git a/src/client_ui/shell/features/login/new_ui/normal_login_window.cpp     [known]
+diff --git a/src/client_ui/uikit/... IconTextButton (class ui_kit::IconTextButton)   [file inferred; class verified]
+diff --git a/src/client_ui/shell/features/account/... DelAccount (client_ui::account::DelAccount)   [file inferred; class verified]
+@@ stylesheets written as QStringLiteral with fixed colours (Get Started / sign-in, Delete Account) @@
++    // [verified] These are UTF-16 string literals (QStringLiteral), so they are not run through
++    // resolveStyleSheet and keep their light colours in every theme.
+@@ IconTextButton: the button frame ("Continue with Google", "Continue with Email") @@
+-    "QWidget[iconTextButton=\"true\"]{background-color:rgba(255,255,255,255);border:1px solid rgba(117,117,115,115);border-radius:4px;}"
+-    "QWidget[iconTextButton=\"true\"][buttonState=\"hover\"]{background-color:rgba(255,255,255,255);border:1px solid rgba(11,102,221,77);...}"
++    "QWidget[iconTextButton=\"true\"]{background-color:@ThemeColor(kFillSolidWhite);border:1px solid @ThemeColor(kBorderBlackAlpha24);border-radius:4px;}"
++    "QWidget[iconTextButton=\"true\"][buttonState=\"hover\"]{background-color:@ThemeColor(kFillAlmostWhite);border:1px solid @ThemeColor(kBorderBrandHover);...}"
++    // (three variants exist - outlined, plain and blue; the blue one keeps rgba(0,122,255,255) and should use kFillBrand)
+@@ IconTextButton: the label @@
++    // [verified] Two paths set the label colour. One is themed ("font-size:14px;color:%1;" with a token).
++    // The other, in the style setup, builds "font-size:%1px;color:rgba(%2,%3,%4,%5);" from fixed QColors:
++    // black at 90/60/45/35% for the outlined and plain styles, white for the blue style. Use tokens there:
+-    QColor(0, 0, 0, 230)   QColor(0, 0, 0, 153)   QColor(0, 0, 0, 115)   QColor(0, 0, 0, 89)
++    themeColor(kTextBlackAlpha230) themeColor(kTextBlackAlpha153) themeColor(kTextBlackAlpha115) themeColor(kTextBlackAlpha89)
+-    QColor(255, 255, 255, 255)                            // text on the blue style
++    themeColor(kTextInversePrimary)   // and in dark themes a dark text token, since the accent fill is light there
+@@ login / Delete Account body text, links and inputs @@
+-    "font-size: 14px; color: rgba(0, 0, 0, 0.9);"
++    "font-size: 14px; color: @ThemeColor(kTextBlackAlpha230);"
+-    "color:#3A7BFC;"   /* links */
++    "color:@ThemeColor(kTextBrand);"
+-    "QTextEdit{background:#FFFFFF;border:1px solid rgba(0, 0, 0, 26);...color:rgba(0, 0, 0, 153);...}"
++    "QTextEdit{background:@ThemeColor(kFillSolidWhite);border:1px solid @ThemeColor(kBorderBlackAlpha24);...color:@ThemeColor(kTextBlackAlpha153);...}"
++    // Full list with dark and AMOLED values: hardcoded_colors_dark.csv, "UTF-16" rows.
+
+diff --git a/src/client_ui/shell/features/contact/contact.cpp b/src/client_ui/shell/features/contact/contact.cpp   [known; verified]
+@@ void ContactViewItem::loadIconImage(...) @@
++    // [verified] For icons on nrd-ugc.fp.ps.netease.com/file/ or stardesk-file.fp.guinfra.com/file/ the URL
++    // gets "?fop=imageView/1/w/%1/h/%2/q/95" (server-side resize). Some icons (Reddit) come back blank.
+@@ void ContactViewItem::slotIconPixmapReply(QNetworkReply *reply) @@
+-    image.loadFromData(reply->readAll());
++    if (!image.loadFromData(reply->readAll())) {
++        // [verified] the result was ignored: a failed decode set an empty pixmap and the icon vanished.
++        // Retry once without the resize query, then fall back to a built-in icon.
++        if (retryWithoutResize()) return;
++        image = QImage(QStringLiteral(":/stardesk/contact_default.png"));   // new built-in fallback icon
++    }
+@@ windows_contact_config (server) @@
++    // Monochrome black logos (X) disappear on dark: add an optional "icon_url_dark" and prefer it when
++    // ThemeManager::instance().isDark().
+
+diff --git a/src/client_ui/shell/features/video_ui/video_main_window.cpp b/src/client_ui/shell/features/video_ui/video_main_window.cpp   [known; verified]
+@@ void VideoMainWindow::paintEvent(QPaintEvent *) @@
++    // [verified] draws a 1 px line along the top in GetSysColor(COLOR_WINDOWFRAME) at 50% alpha
++    // (100% when active). On dark that is a bright line; use a border token instead:
+-    QColor c(GetRValue(f), GetGValue(f), GetBValue(f), 255);
++    QColor c = themeColor(ThemeColorToken::kBorderBlackAlpha24);
+@@ remote-session title bar background @@
++    // [verified by testing] the bar is not see-through: it is VideoContentTitle (below), which fills itself.
++    // DWMWA_CAPTION_COLOR does not change it (setting it to the window colour is harmless, but optional).
+
+diff --git a/src/client_ui/shell/features/video_ui/video_content_title.cpp b/src/client_ui/shell/features/video_ui/video_content_title.cpp   [file inferred; class verified]
+@@ void VideoContentTitle::paintEvent(QPaintEvent *) @@
++    // [verified] fills rect() with token 144 (kBorderCoolGray), a border colour: #D7DCE0 on light (the light
++    // grey bar), but in dark themes a border grey that stays light so lines show on dark surfaces.
++    // Confirmed on a running 1.6.0.166 by changing only this token: the whole bar followed it.
+-    painter.setBrush(themeColor(ThemeColorToken::kBorderCoolGray));
++    painter.setBrush(themeColor(ThemeColorToken::kFillRemoteTitleBar));
+     painter.setPen(Qt::NoPen);
+     painter.drawRects(&r, 1);
+
+diff --git a/src/client_ui/shell/features/account/... DelAccount (Delete Account agreement)   [file inferred; verified]
+@@ the agreement page shown in the text box (an HTML string per language) @@
+-body { font-family: "Segoe UI"; font-size: 14px; color: #0c0c0c; margin: 0; padding: 0; }
++body { font-family: "Segoe UI"; font-size: 14px; color: %TEXT%; margin: 0; padding: 0; }
++    // fill %TEXT% from kTextBlackAlpha230 (#0c0c0c on light, near-white on dark) before setHtml()
